@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quotation | Excel Tutor</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='quotation.css'>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="/email_automation.js"></script>
+</head>
+<body>
+    <img id="background_image" src="/images/EditZA_II.png"/>
+    <form id="quotation-form">
+        <label id="the_title_label">Quick Quote:</label>
+        <label id="first_name_label" for="first_name_input">First Name</label>
+        <label id="last_name_label" for="last_name_input">Last Name</label>
+        <label id="email_label" for="email_input">Email:</label>
+        <label id="task_type_label" for="email_input">Task type</label>
+        <label id="when_required_label">When Required</label>
+        <label id="message_label" for="email_input">Message</label>
+        <input id="first_name_input">
+        <input id="last_name_input">
+        <input id="email_input">
+        <select id="task_type_dropdown-menu">
+            <option value="Personal">Personal</option>
+            <option value="Professional">Professional</option>
+        </select>
+        <select id="when_required_dropdown-menu">
+            <option value="1 Week">1 Week</option>
+            <option value="2 Weeks">2 Weeks</option>
+            <option value="A Month">A Month</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea id="message_box_textarea"></textarea>
+        <!--<input id="choose_file_button"  type="file">-->
+        <button id="submit_button" onclick="sendEmail(); return false;">Send</button>
+        <svg id="close_button" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16" onload="goToMainPage();">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+    </form>
+    <p id="notice_text">
+        You may send us a quote by filling this form with your
+        information and submitting it. You can ask us (in the message box)
+        anything you have in mind related to our service.
+        This will send your query and details to our email,
+        so we can mentally sketch out what sort of Excel project
+        you would like.
+        If you are unsure of anything, please only fill your
+        email adress and your message, and keep all the other
+        text fields blank.
+        Please note that we are commited to our company policy, 
+        which strongly prohibits any misuse of the information you provide us with.
+        We will only use the data you give us (by your consent) to grasp a faint insight
+        of what the client (i.e. you) will need. 
+        Using your data without your consent, 
+        for any purpose, will breach our privacy policy,
+        which we are committed never to do.
+    </p>
+    
+</body>
+<script>
+    function goToMainPage() {
+        var close_button = document.getElementById('close_button');
+
+        close_button.addEventListener("click", (e) => {
+            window.location.assign('index.html');
+        });
+    }
+</script>
+</html>

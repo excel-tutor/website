@@ -1,0 +1,736 @@
+@font-face {
+    font-family: 'Amiri';
+    src: url("/fonts/Amiri-Regular.ttf");
+}
+
+body {
+    background-color: black;
+}
+
+#background_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    filter: grayscale(0.7);
+    mix-blend-mode: normal;
+    opacity: 0.15;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+#quotation-form {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    background-color: #0f67a6;
+    top: 10vh;
+    left: 10vw;
+    border-radius: 3px;
+    z-index: 7;
+}
+
+#the_title_label {
+    position: absolute;
+    font-family: 'Amiri';
+    font-size: 70px;
+    left: 13vw;
+    color: white;
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+#the_title_label::selection {
+    background-color: #ffffff;
+    color: #0f67a6;
+}
+
+#first_name_label {
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    top: 140px;
+    right: 18vw;
+}
+
+#first_name_label::selection {
+    background-color: #ffffff;
+    color: #0f67a6;
+}
+
+#first_name_input {
+    position: absolute;
+    width: 330px;
+    height: 70px;
+    background-color: #ffffff;
+    border: none;
+    top: 140px;
+    right: 3vw;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Amiri';
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+#last_name_label {
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    top: 270px;
+    right: 18vw;
+    
+}
+
+#last_name_input {
+    position: absolute;
+    width: 330px;
+    height: 70px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    /*border: solid 3px rgb(99, 99, 99);*/
+    border-radius: 3px;
+    top: 270px;
+    right: 3vw;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Amiri';
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+#email_label {
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    top: 400px;
+    right: 23vw;
+}
+
+#task_type_label {
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    top: 530px;
+    left: 3vw;
+}
+
+#when_required_label {
+    position: absolute;
+    font-size: 33px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    top: 530px;
+    right: 12vw;
+}
+
+#message_label {
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Amiri';
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    top: 610px;
+    left: 3vw;
+}
+
+#email_input {
+    position: absolute;
+    width: 470px;
+    height: 70px;
+    background-color: #ffffff;
+    /*border: solid 3px rgb(99, 99, 99);*/
+    border: none;
+    border-radius: 3px;
+    top: 400px;
+    right: 3vw;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Amiri';
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+#task_type_dropdown-menu {
+    position: absolute;
+    width: 230px;
+    height: 70px;
+    background-color: #ffffff;
+    border: solid 3px rgb(99, 99, 99);
+    border-radius: 3px;
+    top: 530px;
+    left: 10vw;
+    font-size: 40px;
+    font-family: 'Amiri';
+}
+
+#when_required_dropdown-menu {
+    position: absolute;
+    width: 210px;
+    height: 70px;
+    background-color: #ffffff;
+    border: solid 3px rgb(99, 99, 99);
+    border-radius: 3px;
+    top: 530px;
+    right: 3vw;
+    font-size: 40px;
+    font-family: 'Amiri';
+}
+
+#message_box_textarea {
+    position: absolute;
+    width: 690px;
+    height: 210px;
+    background-color: #ffffff;
+    border: solid 3px rgb(99, 99, 99);
+    border-radius: 3px;
+    top: 627px;
+    right: 3vw;
+    font-size: 40px;
+    font-family: 'Amiri';
+}
+
+/*#choose_file_button {
+    position: absolute;
+    width: 270px;
+    height: 99px;
+    background-color: black;
+    color: white;
+    font-family: 'Amiri';
+    bottom: 70px;
+    right: 10vw;
+    border: solid 3px rgb(0, 5, 70);
+    border-radius: 3px;
+    font-size: 56px;
+    /*border: none;*/
+/*}*/
+
+#submit_button {
+    position: absolute;
+    width: 270px;
+    height: 99px;
+    background-color: black;
+    color: white;
+    font-family: 'Amiri';
+    bottom: 70px;
+    right: 3vw;
+    border: solid 3px rgb(0, 5, 70);
+    border-radius: 3px;
+    font-size: 56px;
+    /*border: none;*/
+}
+
+#submit_button::selection {
+    background-color: transparent;
+}
+
+#close_button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    scale: 3;
+    /*color: white;*/
+    /*backdrop-filter: blur(7px);
+    border-radius: 100%;/*/
+    z-index: 7;
+}
+
+@font-face {
+    font-family: 'Quicksand Bold';
+    src: url("/fonts/quicksand_bold.otf");
+}
+
+@font-face {
+    font-family: 'Quicksand Light';
+    src: url("/fonts/quicksand_light.otf");
+}
+
+#notice_text {
+    position: absolute;
+    top: 7vh;
+    font-size: 33px;
+    width: 40vw;
+    right: 3vw;
+    color: white;
+    text-shadow: 0 3px 3px #0f67a6;
+    text-align: left;
+    font-family: 'Quicksand Light';
+    z-index: 10;
+}
+
+#notice_text::selection {
+    background-color: red;
+    color: white;
+}
+
+::-webkit-textfield-decoration-container {
+    display: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    body {
+        background-color: black;
+    }
+    
+    #background_image {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        filter: grayscale(0.7);
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        z-index: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+    
+    #quotation-form {
+        position: absolute;
+        width: 40vw;
+        height: 40vw;
+        background-color: #0f67a6;
+        top: 10vh;
+        left: 10vw;
+        border-radius: 3px;
+        z-index: 7;
+    }
+    
+    #the_title_label {
+        position: absolute;
+        font-family: 'Amiri';
+        font-size: 50px;
+        left: 13vw;
+        color: white;
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        z-index: 10;
+    }
+    
+    #the_title_label::selection {
+        background-color: #ffffff;
+        color: #0f67a6;
+    }
+    
+    #first_name_label {
+        position: absolute;
+        font-size: 27px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 140px;
+        right: 21vw;
+    }
+    
+    #first_name_label::selection {
+        background-color: #ffffff;
+        color: #0f67a6;
+    }
+    
+    #first_name_input {
+        position: absolute;
+        width: 330px;
+        height: 70px;
+        background-color: #ffffff;
+        border: none;
+        top: 127px;
+        right: -1vw;
+        scale: 0.7;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Amiri';
+    }
+    
+    #last_name_label {
+        position: absolute;
+        font-size: 27px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        text-align: center;
+        top: 33vh;
+        right: 18vw;
+    }
+    
+    #last_name_input {
+        position: absolute;
+        width: 330px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 31vh;
+        right: -1vw;
+        text-align: center;
+        font-size: 40px;
+        scale: 0.7;
+        font-family: 'Amiri';
+    }
+    
+    #email_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 400px;
+        right: 23vw;
+    }
+    
+    #task_type_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 530px;
+        left: 3vw;
+    }
+    
+    #when_required_label {
+        position: absolute;
+        font-size: 33px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 530px;
+        right: 12vw;
+    }
+    
+    #message_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 610px;
+        left: 3vw;
+    }
+    
+    #email_input {
+        position: absolute;
+        width: 470px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 45vh;
+        right: -2.1vw;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #task_type_dropdown-menu {
+        position: absolute;
+        width: 230px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 530px;
+        left: 10vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #when_required_dropdown-menu {
+        position: absolute;
+        width: 210px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 530px;
+        right: 3vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #message_box_textarea {
+        position: absolute;
+        width: 690px;
+        height: 210px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 627px;
+        right: 3vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #submit_button {
+        position: absolute;
+        width: 270px;
+        height: 99px;
+        background-color: black;
+        color: white;
+        font-family: 'Amiri';
+        bottom: 70px;
+        right: 3vw;
+        border: solid 3px rgb(0, 5, 70);
+        border-radius: 3px;
+        font-size: 56px;
+        /*border: none;*/
+        scale: 0.7;
+    }
+    
+    #submit_button::selection {
+        background-color: transparent;
+    }
+    
+    #close_button {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        scale: 3;
+        /*color: white;*/
+        /*backdrop-filter: blur(7px);
+        border-radius: 100%;/*/
+        z-index: 7;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    body {
+        background-color: black;
+    }
+    
+    #background_image {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        filter: grayscale(0.7);
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        z-index: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+    
+    #quotation-form {
+        position: absolute;
+        width: 40vw;
+        height: 40vw;
+        background-color: #0f67a6;
+        top: 10vh;
+        left: 10vw;
+        border-radius: 3px;
+        z-index: 7;
+    }
+    
+    #the_title_label {
+        position: absolute;
+        font-family: 'Amiri';
+        font-size: 50px;
+        left: 13vw;
+        color: white;
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        z-index: 10;
+    }
+    
+    #the_title_label::selection {
+        background-color: #ffffff;
+        color: #0f67a6;
+    }
+    
+    #first_name_label {
+        position: absolute;
+        font-size: 27px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 140px;
+        right: 21vw;
+    }
+    
+    #first_name_label::selection {
+        background-color: #ffffff;
+        color: #0f67a6;
+    }
+    
+    #first_name_input {
+        position: absolute;
+        width: 330px;
+        height: 70px;
+        background-color: #ffffff;
+        border: none;
+        top: 127px;
+        right: -1vw;
+        scale: 0.7;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Amiri';
+    }
+    
+    #last_name_label {
+        position: absolute;
+        font-size: 27px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        text-align: center;
+        top: 33vh;
+        right: 18vw;
+    }
+    
+    #last_name_input {
+        position: absolute;
+        width: 330px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 31vh;
+        right: -1vw;
+        text-align: center;
+        font-size: 40px;
+        scale: 0.7;
+        font-family: 'Amiri';
+    }
+    
+    #email_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 400px;
+        right: 23vw;
+    }
+    
+    #task_type_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 530px;
+        left: 3vw;
+    }
+    
+    #when_required_label {
+        position: absolute;
+        font-size: 33px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 530px;
+        right: 12vw;
+    }
+    
+    #message_label {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        color: white;
+        top: 610px;
+        left: 3vw;
+    }
+    
+    #email_input {
+        position: absolute;
+        width: 470px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 45vh;
+        right: -2.1vw;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #task_type_dropdown-menu {
+        position: absolute;
+        width: 230px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 530px;
+        left: 10vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #when_required_dropdown-menu {
+        position: absolute;
+        width: 210px;
+        height: 70px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 530px;
+        right: 3vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #message_box_textarea {
+        position: absolute;
+        width: 690px;
+        height: 210px;
+        background-color: #ffffff;
+        border: solid 3px rgb(99, 99, 99);
+        border-radius: 3px;
+        top: 627px;
+        right: 3vw;
+        font-size: 40px;
+        font-family: 'Amiri';
+        scale: 0.7;
+    }
+    
+    #submit_button {
+        position: absolute;
+        width: 270px;
+        height: 99px;
+        background-color: black;
+        color: white;
+        font-family: 'Amiri';
+        bottom: 70px;
+        right: 3vw;
+        border: solid 3px rgb(0, 5, 70);
+        border-radius: 3px;
+        font-size: 56px;
+        /*border: none;*/
+        scale: 0.7;
+    }
+    
+    #submit_button::selection {
+        background-color: transparent;
+    }
+    
+    #close_button {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        scale: 3;
+        /*color: white;*/
+        /*backdrop-filter: blur(7px);
+        border-radius: 100%;/*/
+        z-index: 7;
+    }
+}

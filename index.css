@@ -1,0 +1,766 @@
+@font-face {
+    font-family: 'Amiri';
+    src: url("/fonts/Amiri-Regular.ttf");
+}
+
+body {
+    background-color: black;
+}
+
+#header {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    z-index: 5;
+    background-color: transparent;
+    top: 0px;
+    left: 20%;
+}
+
+#home_text {
+    position: absolute;
+    font-size: 30px;
+    color: #6bb3e7;
+    font-family: 'Amiri';
+    left: 10%;
+}
+
+#home_text::selection {
+    background-color: rgba(255, 255, 255, 0.27);
+    color: white;
+}
+
+#sample_text {
+    position: absolute;
+    font-size: 30px;
+    color: #6bb3e7;
+    font-family: 'Amiri';
+    left: 30%;
+    text-align: center;
+    align-items: center;
+}
+
+#sample_text::selection {
+    background-color: rgba(255, 255, 255, 0.27);
+    color: white;
+}
+
+#contact_text {
+    position: absolute;
+    font-size: 30px;
+    color: #6bb3e7;
+    font-family: 'Amiri';
+    left: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+#contact_text::selection {
+    background-color: rgba(255, 255, 255, 0.27);
+    color: white;
+}
+
+
+#background_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    filter: grayscale(0.7);
+    mix-blend-mode: normal;
+    opacity: 0.15;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+#header_text {
+    position: absolute;
+    font-size: 80px;
+    font-family: 'Amiri';
+    mix-blend-mode: normal;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
+    left: 7vw;
+    top: 20vh;
+    animation-name: headerText_anim;
+    animation-duration: 1.8s;
+    animation-timing-function: cubic-bezier(.45,.16,.22,1);
+    animation-fill-mode: forwards;
+    opacity: 1;
+    z-index: 5;
+}
+
+#underline {
+    position: absolute;
+    height: 5px;
+    width: 28%;
+    border-radius: 10px;
+    /*top: 33vh;*/
+    top: 33vh;
+    left: 7vw;
+    background-color: #0f67a6;
+    animation-name: underlineAnimation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.58,.26,.51,1.02);
+}
+
+#footer {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    z-index: 5;
+    background-color: transparent;
+    bottom: 0px;
+    left: 20%;
+}
+
+#home_text_bottom {
+    position: absolute;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Amiri';
+    left: 10%;
+}
+
+#sample_text_bottom {
+    position: absolute;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Amiri';
+    left: 30%;
+    text-align: center;
+    align-items: center;
+    /*text-decoration: underline;*/
+}
+
+#contact_text_bottom {
+    position: absolute;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Amiri';
+    left: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+#underline_2 {
+    position: absolute;
+    height: 5px;
+    width: 2.5%;
+    border-radius: 10px;
+    bottom: 5.5vh;
+    left: 9.7vw;
+    background-color: #0f67a6;
+}
+
+#underline_3 {
+    position: absolute;
+    height: 5px;
+    width: 2.5%;
+    border-radius: 10px;
+    bottom: 5.5vh;
+    left: 29.85vw;
+    background-color: #0f67a6;
+}
+
+#underline_4 {
+    position: absolute;
+    height: 5px;
+    width: 2.5%;
+    border-radius: 10px;
+    bottom: 5.5vh;
+    left: 50vw;
+    background-color: #0f67a6;
+}
+
+#description {
+    position: absolute;
+    z-index: 7;
+    color: white;
+    width: 45vw;
+    top: 35vh;
+    left: 7vw;
+    font-family: 'Quicksand Light';
+    font-weight: 100;
+    font-size: 40px;
+}
+
+#quick-quote_button {
+    position: absolute;
+    width: 270px;
+    height: 70px;
+    background-color: #0f67a6;
+    border: none;
+    top: 74vh;
+    left: 39.3vw;
+    z-index: 5;
+}
+
+#quick-quote_button:active {
+    position: absolute;
+    width: 270px;
+    height: 70px;
+    background-color: #0f4ba6;
+    border: none;
+    top: 74vh;
+    left: 39.3vw;
+    z-index: 5;
+}
+
+#quick-quote_button p {
+    position: absolute;
+    top: -30px;
+    left: 33px;
+    color: white;
+    font-family: 'Quicksand Bold';
+    font-size: 40px;
+}
+
+.bi-house {
+    position: absolute;
+    scale: 2.5;
+    left: 14.3vw;
+    top: 3.3vh;
+    z-index: 7;
+}
+
+.bi-file-earmark-excel {
+    position: absolute;
+    scale: 2.5;
+    left: 880px;
+    top: 3.3vh;
+    z-index: 7;
+}
+
+.bi-envelope {
+    position: absolute;
+    scale: 2.5;
+    left: 55vw;
+    top: 3.6vh;
+    z-index: 7;
+}
+
+::selection {
+    background-color: #0f67a6;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    body {
+        background-color: black;
+    }
+    
+    #header {
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        z-index: 5;
+        background-color: transparent;
+        top: 0px;
+        left: 20%;
+    }
+    
+    #home_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 10%;
+    }
+    
+    #home_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    #sample_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 30%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #sample_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    #contact_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 50%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #contact_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    
+    #background_image {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        filter: grayscale(0.7);
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        z-index: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+    
+    #header_text {
+        position: absolute;
+        font-size: 80px;
+        font-family: 'Amiri';
+        mix-blend-mode: normal;
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
+        left: 7vw;
+        top: 18vh;
+        animation-name: headerText_anim_version-2;
+        animation-duration: 1.8s;
+        animation-timing-function: cubic-bezier(.45,.16,.22,1);
+        animation-fill-mode: forwards;
+        opacity: 1;
+        z-index: 5;
+    }
+    
+    #underline {
+        position: absolute;
+        height: 5px;
+        width: 28%;
+        border-radius: 10px;
+        /*top: 33vh;*/
+        top: 36vh;
+        left: 7vw;
+        background-color: #0f67a6;
+        animation-name: underlineAnimation;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.58,.26,.51,1.02);
+    }
+    
+    #footer {
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        z-index: 5;
+        background-color: transparent;
+        bottom: 0px;
+        left: 20%;
+    }
+    
+    #home_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 10%;
+    }
+    
+    #sample_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 30%;
+        text-align: center;
+        align-items: center;
+        /*text-decoration: underline;*/
+    }
+    
+    #contact_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 50%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #underline_2 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 9.7vw;
+        background-color: #0f67a6;
+    }
+    
+    #underline_3 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 29.85vw;
+        background-color: #0f67a6;
+    }
+    
+    #underline_4 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 50vw;
+        background-color: #0f67a6;
+    }
+    
+    #description {
+        position: absolute;
+        z-index: 7;
+        color: white;
+        width: 45vw;
+        top: 35vh;
+        left: 7vw;
+        font-family: 'Quicksand Light';
+        font-weight: 100;
+        font-size: 27px;
+    }
+    
+    #quick-quote_button {
+        position: absolute;
+        width: 270px;
+        height: 70px;
+        background-color: #0f67a6;
+        border: none;
+        top: 74vh;
+        left: 39.3vw;
+        z-index: 5;
+    }
+    
+    #quick-quote_button:active {
+        position: absolute;
+        width: 270px;
+        height: 70px;
+        background-color: #0f4ba6;
+        border: none;
+        top: 74vh;
+        left: 39.3vw;
+        z-index: 5;
+    }
+    
+    #quick-quote_button p {
+        position: absolute;
+        top: -30px;
+        left: 33px;
+        color: white;
+        font-family: 'Quicksand Bold';
+        font-size: 40px;
+    }
+    
+    .bi-house {
+        position: absolute;
+        scale: 2.5;
+        left: 17vw;
+        top: 5vh;
+        z-index: 7;
+    }
+    
+    .bi-file-earmark-excel {
+        position: absolute;
+        scale: 2.5;
+        left: 38vw;
+        top: 5vh;
+        z-index: 7;
+    }
+    
+    .bi-envelope {
+        position: absolute;
+        scale: 2.5;
+        left: 58vw;
+        top: 5vh;
+        z-index: 7;
+    }   
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    body {
+        position: absolute;
+        overflow-x: hidden;
+        background-color: black;
+        zoom: 210%;
+    }
+    
+    #header {
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        z-index: 5;
+        background-color: transparent;
+        top: 0px;
+        left: 20%;
+    }
+    
+    #home_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 10%;
+        display: none;
+    }
+    
+    #home_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    #sample_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 30%;
+        text-align: center;
+        align-items: center;
+        display: none;
+    }
+    
+    #sample_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    #contact_text {
+        position: absolute;
+        font-size: 30px;
+        color: #6bb3e7;
+        font-family: 'Amiri';
+        left: 50%;
+        text-align: center;
+        align-items: center;
+        display: none;
+    }
+    
+    #contact_text::selection {
+        background-color: rgba(255, 255, 255, 0.27);
+        color: white;
+    }
+    
+    
+    #background_image {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        filter: grayscale(0.7);
+        mix-blend-mode: normal;
+        opacity: 0.15;
+        z-index: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+    
+    #header_text {
+        position: absolute;
+        font-size: 40px;
+        font-family: 'Amiri';
+        mix-blend-mode: normal;
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
+        left: 7vw;
+        top: 20vh;
+        width: 100vw;
+        animation-name: headerText_anim;
+        animation-duration: 1.8s;
+        animation-timing-function: cubic-bezier(.45,.16,.22,1);
+        animation-fill-mode: forwards;
+        opacity: 1;
+        z-index: 5;
+    }
+    
+    #underline {
+        position: absolute;
+        height: 5px;
+        width: 28%;
+        border-radius: 10px;
+        /*top: 33vh;*/
+        top: 36vh;
+        left: 7vw;
+        background-color: #0f67a6;
+        animation-name: underlineAnimation;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.58,.26,.51,1.02);
+    }
+    
+    #footer {
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        z-index: 5;
+        background-color: transparent;
+        bottom: 0px;
+        left: 20%;
+    }
+    
+    #home_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 10%;
+    }
+    
+    #sample_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 30%;
+        text-align: center;
+        align-items: center;
+        display: none;
+        /*text-decoration: underline;*/
+    }
+    
+    #contact_text_bottom {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'Amiri';
+        left: 50%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #underline_2 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 9.7vw;
+        background-color: #0f67a6;
+    }
+    
+    #underline_3 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 29.85vw;
+        background-color: #0f67a6;
+    }
+    
+    #underline_4 {
+        position: absolute;
+        height: 5px;
+        width: 2.5%;
+        border-radius: 10px;
+        bottom: 5.5vh;
+        left: 50vw;
+        background-color: #0f67a6;
+    }
+    
+    #description {
+        position: absolute;
+        z-index: 7;
+        color: white;
+        width: 87vw;
+        height: 40vh;
+        top: 35vh;
+        left: 7vw;
+        font-family: 'Quicksand Light';
+        font-weight: 100;
+        font-size: 27px;
+    }
+    
+    #quick-quote_button {
+        position: absolute;
+        width: 270px;
+        height: 70px;
+        background-color: #0f67a6;
+        border: none;
+        top: 74vh;
+        left: 39.3vw;
+        z-index: 5;
+    }
+    
+    #quick-quote_button:active {
+        position: absolute;
+        width: 270px;
+        height: 70px;
+        background-color: #0f4ba6;
+        border: none;
+        top: 74vh;
+        left: 39.3vw;
+        z-index: 5;
+    }
+    
+    #quick-quote_button p {
+        position: absolute;
+        top: -30px;
+        left: 33px;
+        color: white;
+        font-family: 'Quicksand Bold';
+        font-size: 40px;
+    }
+    
+    .bi-house {
+        position: absolute;
+        scale: 2.5;
+        right: 7vw;
+        top: 3.3vh;
+        z-index: 7;
+    }
+    
+    .bi-file-earmark-excel {
+        position: absolute;
+        scale: 2.5;
+        right: 5vw;
+        top: 3.3vh;
+        z-index: 7;
+    }
+    
+    .bi-envelope {
+        position: absolute;
+        scale: 2.5;
+        right: 5vw;
+        top: 3.6vh;
+        z-index: 7;
+    }
+}
+
+@font-face {
+    font-family: 'Quicksand Bold';
+    src: url("/fonts/quicksand_bold.otf");
+}
+
+@font-face {
+    font-family: 'Quicksand Light';
+    src: url("/fonts/quicksand_light.otf");
+}
+
+@keyframes underlineAnimation {
+    0% { width: 0vw; }
+    100% { width: 28%; }
+}
+
+@keyframes headerText_anim {
+    0% { top: 33vh; opacity: 0; }
+    100% { top: 20vh; opacity: 1; }
+}
+
+@keyframes headerText_anim_version-2 {
+    0% { top: 33vh; opacity: 0; }
+    100% { top: 18vh; opacity: 1; }
+}

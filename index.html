@@ -1,1 +1,45 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Excel Tutor | Master of Microsoft Excel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <div id="header"><p id="home_text">Home</p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6bb3e7" class="bi bi-house" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+      </svg> <p id="sample_text">Sample</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6bb3e7" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+        <path d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
+        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+      </svg> <p id="contact_text" onclick="window.location.assign('quotation.html');">Contact</p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6bb3e7" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+      </svg></div>
+    <div id="footer"><p id="home_text_bottom">Home</p> <p id="sample_text_bottom">Sample</p>
+         <p id="contact_text_bottom" onclick="window.location.assign('quotation.html');">Contact</p> <div id="underline_2"></div><div id="underline_3"></div><div id="underline_4"></div></div>
+</head>
+<body>
+    <img id="background_image" src="/images/EditZA_II.png"/>
+    <h1 id="header_text">Learn from an expert</h1>
+    <p id="description">Excel project, assignment or to create anything interests you either for your professional work, school or college, please drop me your requirements, you will be notified with the best price. Price starts from £20 depending on the complexity of task. Return customers would always get a 10% off to their next job(s) requested. Feel free to contact me for a quick quotation and for an estimated time of completion.
+        This is to mention that I purely use excel formulas & pivot tables no VBA coding is used.</p>
+    <div id="underline"></div>
+    <button id="quick-quote_button"><p>Quotation</p></button>
+</body>
+<script>
+    var the_button = document.getElementById("quick-quote_button");
+    var sample_text_top = document.getElementById('sample_text');
+    var sample_text_bottom = document.getElementById('sample_text_bottom');
 
+    the_button.addEventListener("click", (e) => {
+        window.location.assign('/quotation.html');
+    });
+
+    sample_text.addEventListener("click", (e) => {
+      window.location.assign('sample.html');
+    });
+
+    sample_text_bottom.addEventListener("click", (e) => {
+      window.location.assign('sample.html');
+    });
+</script>
+</html>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Amiri';
-    src: url("/fonts/Amiri-Regular.ttf");
+    src: url("/fonts/amiri.ttf");
 }
 
 body {
@@ -491,10 +491,10 @@ body {
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
     body {
-        position: absolute;
+        position: fixed;
         overflow-x: hidden;
         background-color: black;
-        zoom: 210%;
+        zoom: 100%;
     }
     
     #header {
@@ -571,18 +571,24 @@ body {
     #header_text {
         position: absolute;
         font-size: 40px;
+        line-height: 40px;
         font-family: 'Amiri';
         mix-blend-mode: normal;
         color: rgba(255, 255, 255, 0.7);
         text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
         left: 7vw;
-        top: 20vh;
-        width: 100vw;
-        animation-name: headerText_anim;
+        top: 10vh;
+        width: 330px;
+        height: 100px;
+        animation-name: headerText_anim_version-3;
         animation-duration: 1.8s;
         animation-timing-function: cubic-bezier(.45,.16,.22,1);
         animation-fill-mode: forwards;
         opacity: 1;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
         z-index: 5;
     }
     
@@ -675,41 +681,45 @@ body {
         position: absolute;
         z-index: 7;
         color: white;
-        width: 87vw;
+        width: 82vw;
         height: 40vh;
-        top: 35vh;
+        top: 27vh;
         left: 7vw;
         font-family: 'Quicksand Light';
         font-weight: 100;
-        font-size: 27px;
+        font-size: 18px;
     }
     
     #quick-quote_button {
         position: absolute;
-        width: 270px;
+        width: 90vw;
         height: 70px;
         background-color: #0f67a6;
         border: none;
-        top: 74vh;
-        left: 39.3vw;
+        top: 70vh;
+        left: 10px;
+        right: 10px;
+        scale: 0.93;
         z-index: 5;
     }
     
     #quick-quote_button:active {
         position: absolute;
-        width: 270px;
+        width: 90vw;
         height: 70px;
-        background-color: #0f4ba6;
         border: none;
-        top: 74vh;
-        left: 39.3vw;
+        top: 70vh;
+        left: 10px;
+        right: 10px;
+        scale: 0.93;
         z-index: 5;
+        background-color: #0f4ba6;
     }
     
     #quick-quote_button p {
         position: absolute;
-        top: -30px;
-        left: 33px;
+        top: -27px;
+        left: 18vw;
         color: white;
         font-family: 'Quicksand Bold';
         font-size: 40px;
@@ -718,15 +728,15 @@ body {
     .bi-house {
         position: absolute;
         scale: 2.5;
-        right: 7vw;
+        left: 42vw;
         top: 3.3vh;
         z-index: 7;
     }
     
     .bi-file-earmark-excel {
-        position: absolute;
+        position: relative;
         scale: 2.5;
-        right: 5vw;
+        left: 65vw;
         top: 3.3vh;
         z-index: 7;
     }
@@ -734,7 +744,7 @@ body {
     .bi-envelope {
         position: absolute;
         scale: 2.5;
-        right: 5vw;
+        left: 87vw;
         top: 3.6vh;
         z-index: 7;
     }
@@ -763,4 +773,9 @@ body {
 @keyframes headerText_anim_version-2 {
     0% { top: 33vh; opacity: 0; }
     100% { top: 18vh; opacity: 1; }
+}
+
+@keyframes headerText_anim_version-3 {
+    0% { top: 33vh; opacity: 0; }
+    100% { top: 10vh; opacity: 1; }
 }

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Amiri';
-    src: url("/fonts/amiri.ttf");
+    src: url("../fonts/amiri.ttf");
 }
 
 body {
@@ -752,12 +752,12 @@ body {
 
 @font-face {
     font-family: 'Quicksand Bold';
-    src: url("/fonts/quicksand_bold.otf");
+    src: url("../fonts/quicksand_bold.otf");
 }
 
 @font-face {
     font-family: 'Quicksand Light';
-    src: url("/fonts/quicksand_light.otf");
+    src: url("../fonts/quicksand_light.otf");
 }
 
 @keyframes underlineAnimation {
